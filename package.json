@@ -1,7 +1,8 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "deploy-altar:rinkeby": "npx hardhat run scripts/deploy-altar.ts --network rinkeby"
+    "deploy-altar:rinkeby": "npx hardhat run scripts/deploy.ts --network rinkeby",
+    "deploy:harmonyDevnet": "npx hardhat run scripts/deploy.ts --network harmonyDevnet"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
