@@ -5,6 +5,8 @@ import "hardhat/console.sol";
 
 contract Altar {
   NeonToken private neon;
+  
+  event PrayingComplete(address to, uint256 qtyReceived);
 
   constructor(address neonTokenAddress) {
     neon = NeonToken(neonTokenAddress);
@@ -12,6 +14,7 @@ contract Altar {
 
   function pray() public {
     neon.mint(msg.sender, 1 ether);
+    emit PrayingComplete(msg.sender, 1 ether);
   }
 }
 
